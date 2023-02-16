@@ -1,0 +1,31 @@
+<!-- Form-->
+<form class="row g-3" action="/form_purchase/" method="POST">{% csrf_token %}
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">Cantidad</label>
+      <input type="number" placeholder="0" name="amount" class="form-control" id="inputEmail4">
+    </div>
+    <div class="col-md-4">
+      <label for="inputState" class="form-label">Productos</label>
+      <select id="inputState" name="product" class="form-select">
+        <option selected>Seleccionar...</option>
+        {% for product in products %}            
+              <option>{{product.name}}</option>        
+        {% endfor %}
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label for="inputState" class="form-label">Clientes</label>
+      <select id="inputState" name="client" class="form-select">
+        <option selected>Seleccionar...</option>
+        {% for client in clients %}            
+              <option>{{client.name}} {{client.lastname}}</option>        
+        {% endfor %}
+      </select>
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+    <div class="col-12">
+      <a href="/product/" class="btn btn-primary">volver</a>
+    </div>
+  </form>

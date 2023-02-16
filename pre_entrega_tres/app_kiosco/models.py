@@ -9,7 +9,7 @@ class Product(models.Model):
     name = models.CharField(max_length=200)
     size = models.IntegerField()
     code = models.IntegerField()
-    product = models.ForeignKey(Provider, on_delete=models.CASCADE)
+    brand = models.ForeignKey(Provider, on_delete=models.CASCADE)
 
 class Person(models.Model):
     name = models.CharField(max_length=150)

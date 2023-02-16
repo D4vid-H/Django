@@ -1,0 +1,30 @@
+<!-- Form-->
+<form class="row g-3" action="/form_product/" method="POST">{% csrf_token %}
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">Nombre</label>
+      <input type="text" name="name" class="form-control" id="inputEmail4">
+    </div>
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">Tamaño</label>
+      <input type="text" name="size" class="form-control" id="inputEmail4">
+    </div>
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">Codigo</label>
+      <input type="text" name="code" class="form-control" id="inputEmail4">
+    </div>
+    <div class="col-md-4">
+      <label for="inputState" class="form-label">Proveedor</label>
+      <select id="inputState" name="provider" class="form-select">
+        <option selected>Seleccionar...</option>
+        {% for proveedor in proveedores %}            
+              <option>{{proveedor.brand}}</option>        
+        {% endfor %}
+      </select>
+    </div>  
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+    <div class="col-12">
+      <a href="/product/" class="btn btn-primary">volver</a>
+    </div>
+  </form>
