@@ -53,7 +53,7 @@ def form(request, a):
                     return redirect("/product/")
     
     except Exception as error:
-        print("Error: ", error)
+        print("Error_form: ", error)
     return render(request, 'form.html')
 
 def search(request):
@@ -63,10 +63,19 @@ def search(request):
         return render(request, 'product.html', {'products': uno} )
     
     except Exception as error:
-        print("Error: ", error)
+        print("Error_search: ", error)
 
-def purchase(request):
-    return render(request, 'purchase.html')
+def purchase(request):    
+    try:
+        if request.method == 'POST':
+            req_name = request.POST['client']
+            id = req_name[0:1]
+            purch = Purchase.objects.filter(id = id) 
+            return render(request, 'purchase.html', {'purchases': purch, 'clients': Person.objects.all()})
+        else: 
+            return render(request, 'purchase.html', {'clients': Person.objects.all()})
+    except Exception as error:
+        print("Error_purchase: ", error)
 
 def about(request):
     return render(request, 'about.html')
