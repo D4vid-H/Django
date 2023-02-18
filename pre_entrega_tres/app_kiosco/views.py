@@ -32,7 +32,7 @@ def form(request, a):
         match a:
             case 'client':
                 if request.method == "GET":
-                    return render(request, 'form_client.html', {'form': Create_new_person()})
+                    return render(request, 'form_client.html', {'forms': Create_new_person()})
                 else:
                     print("Prueba Db add Person")
                     Person.objects.create(name = request.POST['name'], last_name = request.POST['last_name'])
@@ -58,10 +58,8 @@ def form(request, a):
 
 def search(request):
     try:
-
         req_name = request.POST['search']
-        uno = []
-        uno.append(Product.objects.get(name = req_name))
+        uno = Product.objects.filter(name__startswith = req_name)
         return render(request, 'product.html', {'products': uno} )
     
     except Exception as error:
