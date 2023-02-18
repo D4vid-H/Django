@@ -1,4 +1,8 @@
-{% extends 'layout/nav.html' %} {% block content %}
+{% extends 'layout/nav.html' %} 
+
+{% block content %}
+
+
 <div class="container mt-5 pt-3">
   <div>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quod
@@ -28,7 +32,6 @@
         {% for product in products %}
         <div class="col-3 m-1">
           <div class="card" style="width: 18rem">
-            <!--<img src="..." class="card-img-top" alt="...">-->
             <div class="card-body">
               <h5 class="card-title">{{product.name}}</h5>
               <p class="card-text">{{product.size}} ml</p>
