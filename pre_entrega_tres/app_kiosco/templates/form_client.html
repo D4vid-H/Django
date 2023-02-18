@@ -1,13 +1,6 @@
 <!-- Form-->
-<form class="row g-3" action="/form_client/" method="POST">{% csrf_token %}
-    <div class="col-md-6">
-      <label for="inputEmail4" class="form-label">Nombre</label>
-      <input type="text" name="name" class="form-control" id="inputEmail4">
-    </div>
-    <div class="col-md-6">
-      <label for="inputEmail4" class="form-label">Apellido</label>
-      <input type="text" name="last_name" class="form-control" id="inputEmail4">
-    </div>
+<form class="row g-3" action="/form_client/" method="POST">{% csrf_token %}  
+      {{forms.as_div}}
     <div class="col-12">
       <button type="submit" class="btn btn-primary">Enviar</button>
     </div>
