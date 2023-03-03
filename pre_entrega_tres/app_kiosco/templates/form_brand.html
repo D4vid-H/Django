@@ -1,26 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
+{% extends 'layout/nav.html' %} {% block content %}
+<div class="container mt-5 pt-3">
+  <form class="row g-3" action="/form_brand/" method="POST">
+    {% csrf_token %}
+    <div class="col-md-6">
+      <label for="proveedor" class="form-label">Proveedor</label>
+      <input type="text" name="brand" class="form-control" id="proveedor" />
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+    <div class="col-12">
+      <a href="/product/" class="btn btn-primary">volver</a>
+    </div>
+  </form>
+  <div class="m-3">
+    <div class="text-center">
+      <div class="row">
+        {% for provider in providers %}
+        <div class="col-3 m-1">
+          <div class="card" style="width: 18rem">
+            <div class="card-body">
+              <h5 class="card-title">{{provider.brand}}</h5>
+              <a href="{% url 'form_provider_update' provider.id %}" class="btn btn-primary">Editar</a>
+              <a href="{% url 'form_provider_delete' provider.id %}" class="btn btn-primary">Borrar</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Form-->
 
-  <!-- Form-->
-<form class="row g-3" action="/form_brand/" method="POST">{% csrf_token %}
-  <div class="col-md-6">
-    <label for="proveedor" class="form-label">Proveedor</label>
-    <input type="text" name="brand" class="form-control" id="proveedor">
-  </div>
-  <div class="col-12">
-    <button type="submit" class="btn btn-primary">Enviar</button>
-  </div>
-  <div class="col-12">
-    <a href="/product/" class="btn btn-primary">volver</a>
-  </div>
-</form>
-  
-</body>
-</html>
+{% endblock %}

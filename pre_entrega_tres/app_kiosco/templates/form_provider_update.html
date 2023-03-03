@@ -1,0 +1,27 @@
+{% extends 'layout/nav.html' %} {% block content %}
+
+<div class="container mt-5 pt-3">
+  <!-- Form-->
+  <ul>
+    <li>{{provider}}</li>
+  </ul>
+  <div class="container mt-5 pt-3">
+    <form class="row g-3" action="/form_brand/" method="POST">
+      {% csrf_token %}
+      <div class="col-md-6">
+        <label for="proveedor" class="form-label">Proveedor</label>
+        <input type="text" name="brand" class="form-control" id="proveedor" />
+        <select id="inputState" name="id" class="form-select">
+            <option selected>{{provider.id}}</option>
+          </select>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </div>
+    </form>
+  <div class="col-12">
+    <a href="/product/" class="btn btn-primary">volver</a>
+  </div>
+</div>
+
+{% endblock %}

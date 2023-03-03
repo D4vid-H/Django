@@ -1,50 +1,269 @@
-{% extends 'layout/nav.html' %}
 
-{% load static %}
-
-{% block content %}
+  {% extends 'layout/nav.html' %} {% load static %} {% block content %}
 
 <div class="container mt-5 pt-3">
-    <div>
-        <p class="text-center">Bienvenido a KO-L (Kiosco ON-LINE)</p>
-    </div>
-
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="{% static '1.png'%}" class="rounded mx-auto d-block w-50" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="{% static '2.png'%}" class="rounded mx-auto d-block w-25" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="{% static '5.png'%}" class="rounded mx-auto d-block w-25" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+  <div>
+    <p class="text-center">Bienvenido a K-OL (Kiosco ON-LINE) - {{mensaje}}</p><span><img src={{avatar}} alt="" sizes="50" srcset=""></span>
+  </div>
+  <div>
+    <img
+    src="{% static 'arcor.jpg'%}"
+    class="rounded mx-auto d-block w-100 pb-3"
+    alt="..."
+  />
+  </div>
+  <div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore a
+      facere illum, saepe culpa asperiores exercitationem voluptatibus in quas
+      placeat corrupti laborum explicabo error quod tempore maxime minima ut
+      repellat unde. Iure atque reiciendis a velit quo! Nobis, delectus alias
+      quidem debitis laboriosam at, aliquid corrupti odit veritatis earum ex
+      doloremque quos illum ducimus unde, nihil quod provident? Quibusdam eius
+      culpa voluptatum magnam. Esse saepe dignissimos magnam unde molestias,
+      voluptatibus similique quo aliquid officiis quam, nemo tempore architecto
+      voluptatum eum perferendis! Maxime libero quas laborum repellendus error
+      quis, explicabo aliquam nemo repudiandae distinctio odio natus doloremque
+      vel perferendis facilis. Sed, voluptatibus dolore? Nulla, obcaecati.
+      Necessitatibus inventore molestias deleniti alias dolorem? Quidem amet
+      velit harum, accusantium veritatis tempore sint nulla neque corporis nam
+      suscipit beatae. Ullam, velit voluptatum laborum autem nesciunt iusto!
+      Dicta quibusdam temporibus optio laboriosam cumque ratione a accusamus
+      quas. Commodi aspernatur consectetur veniam tempore qui! Libero, aperiam.
+      Illo.
+    </p>
+    <div
+    id="carouselExampleAutoplaying"
+    class="carousel slide mb-5"
+    data-bs-ride="carousel"
+  >
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          src="{% static 'fanta.png'%}"
+          class="rounded mx-auto d-block w-25"
+          alt="..."
+        />
       </div>
-
-    <div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore a facere illum, saepe culpa asperiores exercitationem voluptatibus in quas placeat corrupti laborum explicabo error quod tempore maxime minima ut repellat unde. Iure atque reiciendis a velit quo! Nobis, delectus alias quidem debitis laboriosam at, aliquid corrupti odit veritatis earum ex doloremque quos illum ducimus unde, nihil quod provident? Quibusdam eius culpa voluptatum magnam. Esse saepe dignissimos magnam unde molestias, voluptatibus similique quo aliquid officiis quam, nemo tempore architecto voluptatum eum perferendis! Maxime libero quas laborum repellendus error quis, explicabo aliquam nemo repudiandae distinctio odio natus doloremque vel perferendis facilis. Sed, voluptatibus dolore? Nulla, obcaecati. Necessitatibus inventore molestias deleniti alias dolorem? Quidem amet velit harum, accusantium veritatis tempore sint nulla neque corporis nam suscipit beatae. Ullam, velit voluptatum laborum autem nesciunt iusto! Dicta quibusdam temporibus optio laboriosam cumque ratione a accusamus quas. Commodi aspernatur consectetur veniam tempore qui! Libero, aperiam. Illo.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore a facere illum, saepe culpa asperiores exercitationem voluptatibus in quas placeat corrupti laborum explicabo error quod tempore maxime minima ut repellat unde. Iure atque reiciendis a velit quo! Nobis, delectus alias quidem debitis laboriosam at, aliquid corrupti odit veritatis earum ex doloremque quos illum ducimus unde, nihil quod provident? Quibusdam eius culpa voluptatum magnam. Esse saepe dignissimos magnam unde molestias, voluptatibus similique quo aliquid officiis quam, nemo tempore architecto voluptatum eum perferendis! Maxime libero quas laborum repellendus error quis, explicabo aliquam nemo repudiandae distinctio odio natus doloremque vel perferendis facilis. Sed, voluptatibus dolore? Nulla, obcaecati. Necessitatibus inventore molestias deleniti alias dolorem? Quidem amet velit harum, accusantium veritatis tempore sint nulla neque corporis nam suscipit beatae. Ullam, velit voluptatum laborum autem nesciunt iusto! Dicta quibusdam temporibus optio laboriosam cumque ratione a accusamus quas. Commodi aspernatur consectetur veniam tempore qui! Libero, aperiam. Illo.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore a facere illum, saepe culpa asperiores exercitationem voluptatibus in quas placeat corrupti laborum explicabo error quod tempore maxime minima ut repellat unde. Iure atque reiciendis a velit quo! Nobis, delectus alias quidem debitis laboriosam at, aliquid corrupti odit veritatis earum ex doloremque quos illum ducimus unde, nihil quod provident? Quibusdam eius culpa voluptatum magnam. Esse saepe dignissimos magnam unde molestias, voluptatibus similique quo aliquid officiis quam, nemo tempore architecto voluptatum eum perferendis! Maxime libero quas laborum repellendus error quis, explicabo aliquam nemo repudiandae distinctio odio natus doloremque vel perferendis facilis. Sed, voluptatibus dolore? Nulla, obcaecati. Necessitatibus inventore molestias deleniti alias dolorem? Quidem amet velit harum, accusantium veritatis tempore sint nulla neque corporis nam suscipit beatae. Ullam, velit voluptatum laborum autem nesciunt iusto! Dicta quibusdam temporibus optio laboriosam cumque ratione a accusamus quas. Commodi aspernatur consectetur veniam tempore qui! Libero, aperiam. Illo.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore a facere illum, saepe culpa asperiores exercitationem voluptatibus in quas placeat corrupti laborum explicabo error quod tempore maxime minima ut repellat unde. Iure atque reiciendis a velit quo! Nobis, delectus alias quidem debitis laboriosam at, aliquid corrupti odit veritatis earum ex doloremque quos illum ducimus unde, nihil quod provident? Quibusdam eius culpa voluptatum magnam. Esse saepe dignissimos magnam unde molestias, voluptatibus similique quo aliquid officiis quam, nemo tempore architecto voluptatum eum perferendis! Maxime libero quas laborum repellendus error quis, explicabo aliquam nemo repudiandae distinctio odio natus doloremque vel perferendis facilis. Sed, voluptatibus dolore? Nulla, obcaecati. Necessitatibus inventore molestias deleniti alias dolorem? Quidem amet velit harum, accusantium veritatis tempore sint nulla neque corporis nam suscipit beatae. Ullam, velit voluptatum laborum autem nesciunt iusto! Dicta quibusdam temporibus optio laboriosam cumque ratione a accusamus quas. Commodi aspernatur consectetur veniam tempore qui! Libero, aperiam. Illo.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore a facere illum, saepe culpa asperiores exercitationem voluptatibus in quas placeat corrupti laborum explicabo error quod tempore maxime minima ut repellat unde. Iure atque reiciendis a velit quo! Nobis, delectus alias quidem debitis laboriosam at, aliquid corrupti odit veritatis earum ex doloremque quos illum ducimus unde, nihil quod provident? Quibusdam eius culpa voluptatum magnam. Esse saepe dignissimos magnam unde molestias, voluptatibus similique quo aliquid officiis quam, nemo tempore architecto voluptatum eum perferendis! Maxime libero quas laborum repellendus error quis, explicabo aliquam nemo repudiandae distinctio odio natus doloremque vel perferendis facilis. Sed, voluptatibus dolore? Nulla, obcaecati. Necessitatibus inventore molestias deleniti alias dolorem? Quidem amet velit harum, accusantium veritatis tempore sint nulla neque corporis nam suscipit beatae. Ullam, velit voluptatum laborum autem nesciunt iusto! Dicta quibusdam temporibus optio laboriosam cumque ratione a accusamus quas. Commodi aspernatur consectetur veniam tempore qui! Libero, aperiam. Illo.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore a facere illum, saepe culpa asperiores exercitationem voluptatibus in quas placeat corrupti laborum explicabo error quod tempore maxime minima ut repellat unde. Iure atque reiciendis a velit quo! Nobis, delectus alias quidem debitis laboriosam at, aliquid corrupti odit veritatis earum ex doloremque quos illum ducimus unde, nihil quod provident? Quibusdam eius culpa voluptatum magnam. Esse saepe dignissimos magnam unde molestias, voluptatibus similique quo aliquid officiis quam, nemo tempore architecto voluptatum eum perferendis! Maxime libero quas laborum repellendus error quis, explicabo aliquam nemo repudiandae distinctio odio natus doloremque vel perferendis facilis. Sed, voluptatibus dolore? Nulla, obcaecati. Necessitatibus inventore molestias deleniti alias dolorem? Quidem amet velit harum, accusantium veritatis tempore sint nulla neque corporis nam suscipit beatae. Ullam, velit voluptatum laborum autem nesciunt iusto! Dicta quibusdam temporibus optio laboriosam cumque ratione a accusamus quas. Commodi aspernatur consectetur veniam tempore qui! Libero, aperiam. Illo.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore a facere illum, saepe culpa asperiores exercitationem voluptatibus in quas placeat corrupti laborum explicabo error quod tempore maxime minima ut repellat unde. Iure atque reiciendis a velit quo! Nobis, delectus alias quidem debitis laboriosam at, aliquid corrupti odit veritatis earum ex doloremque quos illum ducimus unde, nihil quod provident? Quibusdam eius culpa voluptatum magnam. Esse saepe dignissimos magnam unde molestias, voluptatibus similique quo aliquid officiis quam, nemo tempore architecto voluptatum eum perferendis! Maxime libero quas laborum repellendus error quis, explicabo aliquam nemo repudiandae distinctio odio natus doloremque vel perferendis facilis. Sed, voluptatibus dolore? Nulla, obcaecati. Necessitatibus inventore molestias deleniti alias dolorem? Quidem amet velit harum, accusantium veritatis tempore sint nulla neque corporis nam suscipit beatae. Ullam, velit voluptatum laborum autem nesciunt iusto! Dicta quibusdam temporibus optio laboriosam cumque ratione a accusamus quas. Commodi aspernatur consectetur veniam tempore qui! Libero, aperiam. Illo.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore a facere illum, saepe culpa asperiores exercitationem voluptatibus in quas placeat corrupti laborum explicabo error quod tempore maxime minima ut repellat unde. Iure atque reiciendis a velit quo! Nobis, delectus alias quidem debitis laboriosam at, aliquid corrupti odit veritatis earum ex doloremque quos illum ducimus unde, nihil quod provident? Quibusdam eius culpa voluptatum magnam. Esse saepe dignissimos magnam unde molestias, voluptatibus similique quo aliquid officiis quam, nemo tempore architecto voluptatum eum perferendis! Maxime libero quas laborum repellendus error quis, explicabo aliquam nemo repudiandae distinctio odio natus doloremque vel perferendis facilis. Sed, voluptatibus dolore? Nulla, obcaecati. Necessitatibus inventore molestias deleniti alias dolorem? Quidem amet velit harum, accusantium veritatis tempore sint nulla neque corporis nam suscipit beatae. Ullam, velit voluptatum laborum autem nesciunt iusto! Dicta quibusdam temporibus optio laboriosam cumque ratione a accusamus quas. Commodi aspernatur consectetur veniam tempore qui! Libero, aperiam. Illo.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore a facere illum, saepe culpa asperiores exercitationem voluptatibus in quas placeat corrupti laborum explicabo error quod tempore maxime minima ut repellat unde. Iure atque reiciendis a velit quo! Nobis, delectus alias quidem debitis laboriosam at, aliquid corrupti odit veritatis earum ex doloremque quos illum ducimus unde, nihil quod provident? Quibusdam eius culpa voluptatum magnam. Esse saepe dignissimos magnam unde molestias, voluptatibus similique quo aliquid officiis quam, nemo tempore architecto voluptatum eum perferendis! Maxime libero quas laborum repellendus error quis, explicabo aliquam nemo repudiandae distinctio odio natus doloremque vel perferendis facilis. Sed, voluptatibus dolore? Nulla, obcaecati. Necessitatibus inventore molestias deleniti alias dolorem? Quidem amet velit harum, accusantium veritatis tempore sint nulla neque corporis nam suscipit beatae. Ullam, velit voluptatum laborum autem nesciunt iusto! Dicta quibusdam temporibus optio laboriosam cumque ratione a accusamus quas. Commodi aspernatur consectetur veniam tempore qui! Libero, aperiam. Illo.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore a facere illum, saepe culpa asperiores exercitationem voluptatibus in quas placeat corrupti laborum explicabo error quod tempore maxime minima ut repellat unde. Iure atque reiciendis a velit quo! Nobis, delectus alias quidem debitis laboriosam at, aliquid corrupti odit veritatis earum ex doloremque quos illum ducimus unde, nihil quod provident? Quibusdam eius culpa voluptatum magnam. Esse saepe dignissimos magnam unde molestias, voluptatibus similique quo aliquid officiis quam, nemo tempore architecto voluptatum eum perferendis! Maxime libero quas laborum repellendus error quis, explicabo aliquam nemo repudiandae distinctio odio natus doloremque vel perferendis facilis. Sed, voluptatibus dolore? Nulla, obcaecati. Necessitatibus inventore molestias deleniti alias dolorem? Quidem amet velit harum, accusantium veritatis tempore sint nulla neque corporis nam suscipit beatae. Ullam, velit voluptatum laborum autem nesciunt iusto! Dicta quibusdam temporibus optio laboriosam cumque ratione a accusamus quas. Commodi aspernatur consectetur veniam tempore qui! Libero, aperiam. Illo.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore a facere illum, saepe culpa asperiores exercitationem voluptatibus in quas placeat corrupti laborum explicabo error quod tempore maxime minima ut repellat unde. Iure atque reiciendis a velit quo! Nobis, delectus alias quidem debitis laboriosam at, aliquid corrupti odit veritatis earum ex doloremque quos illum ducimus unde, nihil quod provident? Quibusdam eius culpa voluptatum magnam. Esse saepe dignissimos magnam unde molestias, voluptatibus similique quo aliquid officiis quam, nemo tempore architecto voluptatum eum perferendis! Maxime libero quas laborum repellendus error quis, explicabo aliquam nemo repudiandae distinctio odio natus doloremque vel perferendis facilis. Sed, voluptatibus dolore? Nulla, obcaecati. Necessitatibus inventore molestias deleniti alias dolorem? Quidem amet velit harum, accusantium veritatis tempore sint nulla neque corporis nam suscipit beatae. Ullam, velit voluptatum laborum autem nesciunt iusto! Dicta quibusdam temporibus optio laboriosam cumque ratione a accusamus quas. Commodi aspernatur consectetur veniam tempore qui! Libero, aperiam. Illo.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore a facere illum, saepe culpa asperiores exercitationem voluptatibus in quas placeat corrupti laborum explicabo error quod tempore maxime minima ut repellat unde. Iure atque reiciendis a velit quo! Nobis, delectus alias quidem debitis laboriosam at, aliquid corrupti odit veritatis earum ex doloremque quos illum ducimus unde, nihil quod provident? Quibusdam eius culpa voluptatum magnam. Esse saepe dignissimos magnam unde molestias, voluptatibus similique quo aliquid officiis quam, nemo tempore architecto voluptatum eum perferendis! Maxime libero quas laborum repellendus error quis, explicabo aliquam nemo repudiandae distinctio odio natus doloremque vel perferendis facilis. Sed, voluptatibus dolore? Nulla, obcaecati. Necessitatibus inventore molestias deleniti alias dolorem? Quidem amet velit harum, accusantium veritatis tempore sint nulla neque corporis nam suscipit beatae. Ullam, velit voluptatum laborum autem nesciunt iusto! Dicta quibusdam temporibus optio laboriosam cumque ratione a accusamus quas. Commodi aspernatur consectetur veniam tempore qui! Libero, aperiam. Illo.</p>
-    
+      <div class="carousel-item">
+        <img
+          src="{% static 'cocazero.png'%}"
+          class="rounded mx-auto d-block w-25"
+          alt="..."
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="{% static 'sprite.png'%}"
+          class="rounded mx-auto d-block w-25"
+          alt="..."
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="{% static 'cocacola.png'%}"
+          class="rounded mx-auto d-block w-25"
+          alt="..."
+        />
+      </div>
     </div>
+    <button
+      class="carousel-control-prev bg-black"
+      type="button"
+      data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next bg-black"
+      type="button"
+      data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+    <ul>
+      <li>Chupetín: caramelo duro que se sostiene sobre un palillo, elaborado con azúcar, colorantes y saborizantes, de diferentes formas y tamaños. Un chupetín bolita tamaño estándar pesa unos 10 gramos y aporta:
+        40 calorías</li>
+        <li>Caramelos ácidos: dulce elaborado con azúcar y saborizantes, hay de diferentes tipos, 5 unidades (sin relleno) aportan alrededor de:
+        100 calorías</li>
+        <li>Caramelos de leche (cuadrados): caramelos blandos de dulce de leche, pesan unos 15 gramos y la porción de 2 unidades aporta:
+        100 calorías</li>
+        <li>Caramelos “Butter Toffee”: caramelos blandos de diferentes sabores (dulce de leche, maní, café, chocolate), con o sin relleno, pesan unos 10 gramos cada uno, la porción es de 3 unidades y aporta:
+        120 calorías</li>
+        <li>Bloque de dulce de leche (Vaquerita): dulce de leche compacto, solo o cubierto con chocolate, la unidad pesa 25 gramos y aporta:
+        80 calorías</li>
+        <li>Marshmallow (o “masmelos”): golosina elaborada con gelatina, clara de huevo y azúcar, un paquete individual de 30 gramos aporta:
+        95 calorías</li>
+        <li>Bombones de fruta: bombones de gelatina azucarados con sabor a frutas, los que se venden en los kioscos son cuadrados, más grandes que los que vienen en cajas, y vienen envueltos en celofán, pesan unos 10 gramos, y la porción de 3 unidades aporta:
+        95 calorías</li>
+        <li>Turrón: oblea rellena con pasta de turrón y maní, la unidad de 25 gramos aporta:
+        100 calorías</li>
+        <li>Alfajor “light” Cormillot: masita rellena con dulce de leche, cubierta con chocolate, con menos azúcar y grasas que la versión original. Una unidad de 50 gramos aporta:
+        150 calorías</li>
+        <li>Alfajor “Ser”: masita rellena con dulce de leche, cubierta con chocolate con menos azúcar y grasas que la versión original. Una unidad de 50 gramos aporta:
+        175 calorías</li>    
+        <li>Alfajor “Tofi Roll”: masita rellena con dulce de leche bañada en chocolate con un agujero en el centro, tipo rosquilla, una unidad pesa casi 40 gramos y aporta:
+        180 calorías</li>
+        <li>Alfajor de fruta: masita rellena con mermelada o jalea de diferentes gustos con baño de repostería o azúcar impalpable, una unidad pesa 40 gramos y aporta:
+        160 calorías</li>
+        <li>Alfajor triple: masita rellena con dulce de leche o mousse bañada en chocolate, una unidad pesa alrededor de 70 gramos (a veces 80, según la marca)y aporta: 350 calorías</li>
+        <li>Alfajor de chocolate (Havanna o similar): masita rellena con dulce de leche bañada en chocolate, una unidad pesa entre 40 y 50 gramos y aporta: 200-220 calorías</li>
+        <li>Cereal inflado: trigo, maíz o arroz azucarados, no aportan grasas; a menos que se trate de pochoclo elaborado con aceite. Como son muy livianos la porción proporciona volumen pero poco peso; por lo tanto, una porción de 50 gramos (1 taza) aporta:</li>
+        200 calorías</li>
+        <li>Barra de granola “Nutri”: barra compacta de cereales, almendras, miel y coco, bañada en chocolate, una unidad pesa 30 gramos y aporta:
+        140 calorías</li>
+        <li>Barra de cereal: barra compacta a base de un tipo de cereal o una mezcla de varios, y agregados como: frutas secas y deshidratadas, coco rallado, yogur, gelatina y chocolate. Una unidad de 23 gramos aporta entre:
+        100-120 calorías</li>
+        <li>Torroncino: barra de chocolate con cereal, sin azúcar, pesa unos 23 gramos y aporta:
+        110 calorías</li>
+        <li>Cereal con chocolate “Croco”: contiene arroz inflado, maní y marshmallow, con sabor a limón, bañado en chocolate, pesa 20 gramos y aporta:
+        105 calorías</li>
+        <li>Semillas de girasol (“Pipas”): se consiguen en paquetes individuales, tostadas y/o saladas, con o sin cáscara, son muy nutritivas, y el paquete aporta unas:
+        120 calorías</li>
+        <li>Higo con nuez: higo deshidratado con ½ nuez, una unidad pesa aprox.25 gramos y aporta:
+        100 calorías</li>
+        <li>Maní: lo ideal es elegir las versiones sin sal, el paquete individual más chico pesa 40 gramos y aporta:
+        230 calorías</li>
+        <li>Maní con chocolate: viene en paquetes individuales, el más pequeño es de 40 gramos y aporta:
+        250 calorías</li>
+        <li>Garrapiñada: el tubito de celofán que se vende en la calle, por ejemplo, pesa unos 40 gramos y aporta:
+        240 calorías</li>
+        <li>Confites de chocolate (tipo M&M): chocolate confitado, viene en paquete individual de 40 gramos y aporta:
+        220 calorías</li>
+        <li>Big Trakinas: galletita rellena sabor frutilla o chocolate, tamaño grande tipo alfajor, pesa 30 gramos y aporta:
+        145 calorías</li>
+        <li>Maxi Melba: galletita de chocolate rellena, tamaño grande también tipo alfajor, pesa 30 gramos y aporta:
+        160 calorías</li>
+        <li>Galletitas dulces simples (Vocación, Maná): el paquete individual de 4 unidades pesa 20 gramos y aporta:
+        90 calorías</li>
+        <li>Masitas (línea verde, Águila): las hay de diferentes sabores: pasta frola, manzana y frutos del bosque. Una unidad pesa unos 40 gramos y aporta, en promedio:
+        150 calorías</li>
+        <li>Barquillo (línea azul, Águila): oblea con relleno sabor limón, pesa 20 gramos y aporta:
+        110 calorías</li>
+        <li>Galletita “bon o bon”: oblea cubierta con chocolate, la unidad pesa 20 gramos y aporta:
+        120 calorías</li>
+        <li>Galletita “Tita”: oblea cubierta con chocolate, pesa casi 20 gramos y aporta:
+        100 calorías</li>
+        <li>Galletita “Rhodesia”: oblea cubierta con chocolate, de mayor tamaño, pesa unos 22 gramos y aporta:
+        120 calorías</li>
+        <li>Barra “Shot manía”: oblea con maní y chocolate, pesa 20 gramos y aporta:
+        140 calorías</li>
+        <li>Barra “Feeling”: barra de nougat cubierta con chocolate, pesa 20 gramos y aporta:
+        97 calorías</li>
+        <li>Barra “Tibis”: cubanito relleno bañado con chocolate con leche y cereal, pesa 25 gramos y aporta:
+        150 calorías</li>
+        <li>Nugaton: oblea rellena de pasta de maní y almendras, bañada en chocolate, pesa 30 gramos y aporta:
+        180 calorías</li>
+        <li>Kinder bueno: galletita con relleno cremoso de avellanas, cubierta con chocolate, vienen 2 unidades en un paquete, pesan 40 gramos y aportan:
+        120 calorías cada una</li>
+        <li>Chocolatín tipo “Milkibar”: chocolate con leche o blanco, la unidad pesa unos 10 gramos, la porción es de 2 unidades y aporta:
+        110 calorías</li>
+        <li>Chocolatín “Jack”: chocolate con leche, pesa unos 15 gramos, 2 unidades aportan:
+        140 calorías</li>
+        <li>Chocolate “diet” (envase verde, Georgalos): chocolate con leche, sin azúcar, pesa 30 gramos y aporta:
+        145 calorías</li>
+        <li>Chocolate “diet” (envase rojo o azul, Felfort): chocolate con leche o amargo, sin azúcar, pesa 25 gramos y aporta:
+        120 calorías</li>
+        <li>Barra de chocolate con maní (Felfort): chocolate con leche y maní, la unidad pesa 25 gramos y aporta:
+        140 calorías</li>
+        <li>Bloque “Shot”: chocolate con leche y maní, la unidad chica pesa 30 gramos y aporta:
+        160 calorías</li>
+        <li>Bloque “Cadbury”: hay de diferentes tipos: chocolate con leche, con pasas de uva, con almendras, con cereal, una unidad chica pesa 30 gramos y aporta:
+        160 calorías</li>
+        <li>Barra chocolate “Águila”: chocolate amargo, viene en barritas individuales de 15 gramos y aporta:
+        85 calorías</li>
+        <li>Barra “Kinder”: chocolate con leche, una unidad pesa 15 gramos y aporta:
+        70 calorías</li>
+        <li>Chocolate “Dos corazones”: chocolate relleno, pesa 25 gramos y aporta:
+        120 calorías</li>
+        <li>Barra “Espacial”: chocolate con leche aireado, la unidad pesa 25 gramos y aporta:
+        140 calorías</li>
+        <li>Toblerone: chocolate con leche, miel y nougat de almendras, vienen en tres tamaños diferentes, el más pequeño pesa 30 gramos y aporta:
+        160 calorías</li>
+        <li>Chocolate “Biznikke”: chocolate blanco y negro con cereal, una unidad pesa 25 gramos y aporta:
+        125 calorías</li>
+        <li>Barra de chocolate y soja “Now”: chocolate con leche y porotos de soja, pesa 15 gramos y aporta:
+        85 calorías</li>
+        <li>Barra de chocolate y maní “Now”: chocolate con leche y maní, pesa 15 gramos y aporta:
+        90 calorías</li>
+        <li>Bocadito “Cabsha”: bocadito de chocolate relleno con dulce de leche, cada uno pesa 10 gramos, la porción de 2 unidades aporta:
+        80 calorías</li>
+        <li>Bocadito “Marroc”: bocadito de chocolate y nougat, cada uno pesa unos 14 gramos, la porción de 2 unidades aporta:
+        140 calorías</li>
+        <li>“Bon o Bon”: bombón de chocolate relleno con pasta de maní o almendra, la unidad pesa casi 20 gramos, y aporta:
+        100 calorías</li>
+        <li>Bombón “Tokke”: bombón de chocolate (con o sin relleno), pesa casi 10 gramos, la porción son 3 unidades y aporta:
+        140 calorías</li>
+        <li>Conito de dulce de leche: bocadito con forma de cono relleno con dulce de leche y baño de chocolate, una unidad pesa unos 40 gramos y aporta:
+        160 calorías</li>
+        <li>Bocadito de dulce de leche: bocadito rectangular relleno con dulce de leche bañado en chocolate, la unidad pesa unos 20 gramos y aporta:
+        80 calorías</li>
+        <li>Bocadito de dulce de leche “Cormillot”: bocadito rectangular relleno con dulce de leche bañado en chocolate light, pesa unos 10 gramos, la porción de 2 unidades aporta:
+        100 calorías</li>
+        <li>Mecano: bocadito de dulce de leche bañado en chocolate, con forma de tuerca, pesa 30 gramos y aporta:
+        120 calorías</li>
+        <li>Huevo “Kinder”: huevo pequeño con cubierta externa de chocolate con leche y cubierta interna de leche, una unidad pesa 20 gramos y aporta:
+        114 calorías</li>
+        <li>Mantecol: barra de pasta de maní, viene en diferentes tamaños, una unidad chica de 30 gramos aporta:
+        170 calorías</li>
+        <li>Bananita Dolca: golosina con relleno sabor a banana y cubierta de chocolate, la unidad chica de 14 gramos aporta:
+        60 calorías y la unidad grande de 30 gramos: 115 calorías</li>
+        <li>Medallón de menta y chocolate: bocadito con relleno sabor menta, cubierto con chocolate, pesa 15 gramos, 2 unidades aportan:
+        120 calorías </li>   
+        <li>Galletitas “Club Social”: galletitas saladas, vienen en paquete individual de 3 unidades, pesa 30 gramos y aportan:
+        110 calorías</li>
+        <li>Papas fritas o palitos salados: el paquete individual más chico pesa 30 gramos y aporta:
+        170 calorías</li>
+        <li>Papas horneadas Lays (aireadas): el paquete individual de 20 gramos aporta: 95 calorías</li>
+        <li>Papas fritas Lays clásicas: la porción de 25 g. (1 taza tamaño té) aporta: 134 calorías</li>
+        <li>
+          Palitos salados o maicitos: el paquete individual más chico pesa 30 gramos y aporta: entre 150-170 calorías
+        </li>
+    </ul>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore a
+      facere illum, saepe culpa asperiores exercitationem voluptatibus in quas
+      placeat corrupti laborum explicabo error quod tempore maxime minima ut
+      repellat unde. Iure atque reiciendis a velit quo! Nobis, delectus alias
+      quidem debitis laboriosam at, aliquid corrupti odit veritatis earum ex
+      doloremque quos illum ducimus unde, nihil quod provident? Quibusdam eius
+      culpa voluptatum magnam. Esse saepe dignissimos magnam unde molestias,
+      voluptatibus similique quo aliquid officiis quam, nemo tempore architecto
+      voluptatum eum perferendis! Maxime libero quas laborum repellendus error
+      quis, explicabo aliquam nemo repudiandae distinctio odio natus doloremque
+      vel perferendis facilis. Sed, voluptatibus dolore? Nulla, obcaecati.
+      Necessitatibus inventore molestias deleniti alias dolorem? Quidem amet
+      velit harum, accusantium veritatis tempore sint nulla neque corporis nam
+      suscipit beatae. Ullam, velit voluptatum laborum autem nesciunt iusto!
+      Dicta quibusdam temporibus optio laboriosam cumque ratione a accusamus
+      quas. Commodi aspernatur consectetur veniam tempore qui! Libero, aperiam.
+      Illo.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore a
+      facere illum, saepe culpa asperiores exercitationem voluptatibus in quas
+      placeat corrupti laborum explicabo error quod tempore maxime minima ut
+      repellat unde. Iure atque reiciendis a velit quo! Nobis, delectus alias
+      quidem debitis laboriosam at, aliquid corrupti odit veritatis earum ex
+      doloremque quos illum ducimus unde, nihil quod provident? Quibusdam eius
+      culpa voluptatum magnam. Esse saepe dignissimos magnam unde molestias,
+      voluptatibus similique quo aliquid officiis quam, nemo tempore architecto
+      voluptatum eum perferendis! Maxime libero quas laborum repellendus error
+      quis, explicabo aliquam nemo repudiandae distinctio odio natus doloremque
+      vel perferendis facilis. Sed, voluptatibus dolore? Nulla, obcaecati.
+      Necessitatibus inventore molestias deleniti alias dolorem? Quidem amet
+      velit harum, accusantium veritatis tempore sint nulla neque corporis nam
+      suscipit beatae. Ullam, velit voluptatum laborum autem nesciunt iusto!
+      Dicta quibusdam temporibus optio laboriosam cumque ratione a accusamus
+      quas. Commodi aspernatur consectetur veniam tempore qui! Libero, aperiam.
+      Illo.
+    </p>
+  </div>
 </div>
 {% endblock %}
+
