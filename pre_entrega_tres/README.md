@@ -34,5 +34,6 @@ Sin iniciar sesion, solo se pueden visitar las secciones de Home, about y contac
     Todos los usuarios creados puede modificar sus atributos como su nombre, correo, etc.
 
 
-
+Desde este link se puede ver el video con la demo de la web con Django. 
+- https://drive.google.com/file/d/1jjGnnob-khjSPa-CeeU70Do4V1Fywf-Z/view?usp=sharing
 
