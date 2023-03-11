@@ -26,7 +26,7 @@ Sin iniciar sesion, solo se pueden visitar las secciones de Home, about y contac
 
 ## Usuarios
 
-    < Se crearon 3 usuarios: >
+    < Se crearon 3 usuarios: la contraseña es la misma para los 3: Pa22w0rd >
         + usuario: Este es el tipo que se crear desde la web a travez del registro y solo se puede consultar los productos y las compras del usuario y tambien comprar productos.
         + staff: Este tipo se crea a travez de la seccion admin de django y puede manejarse haciendo todo menos borrar.
         + admin: Este es el tipo superuser que tiene control absoluto.
