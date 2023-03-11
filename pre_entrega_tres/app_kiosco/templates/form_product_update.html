@@ -1,21 +1,27 @@
-{% extends 'layout/nav.html' %} {% block content %}
-
+{% extends 'layout/nav.html' %} 
+{% block title %} updateProduct {% endblock title %}
+{% block content %}
 <div class="container mt-5 pt-3">
   <!-- Form-->
-  <ul>
-    <li>{{product}}</li>
-  </ul>
-  <form action="/form_product/" method="POST">
+  <form action="{% url 'form_product' %}" method="POST">
     {% csrf_token %}
     <!-- Aca esta la magia de Django -->
     <div class="col-md-6">
       <label for="inputEmail4" class="form-label">Nombre</label>
-      <input type="text" name="name" class="form-control" id="inputEmail4" />
+      <input type="text" value={{product.name}} name="name" class="form-control" id="inputEmail4" />
     </div>
     <div class="col-md-6">
       <label for="inputEmail4" class="form-label">Tamaño</label>
-      <input type="text" name="size" class="form-control" id="inputEmail4" />
-    </div><div class="col-md-4">
+      <input type="text" value={{product.size}} name="size" class="form-control" id="inputEmail4" />
+    </div>
+    <div class="col-md-4">
+      <label for="inputState" class="form-label">Unidad</label>
+      <select id="inputState" name="measure" class="form-select">
+        {% for measure in measures %}
+        <option>{{measure}}</option>
+        {% endfor %}
+      </select>
+    <div class="col-md-4">
       <label for="inputState" class="form-label">Codigo</label>
       <select id="inputState" name="code" class="form-select">
         <option selected>{{product.code}}</option>
@@ -27,11 +33,9 @@
         <option selected>{{product.brand}}</option>
       </select>
     </div>
-    <input type="submit" value="Enviar" />
+    <input type="submit" class="btn btn-primary mb-2 mt-2" value="Enviar" />
+    <a href="/product/" class="btn btn-primary mb-2 mt-2">volver</a>
   </form>
-  <div class="col-12">
-    <a href="/product/" class="btn btn-primary">volver</a>
-  </div>
 </div>
 
 {% endblock %}

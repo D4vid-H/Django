@@ -1,4 +1,6 @@
-{% extends 'layout/nav.html' %} {% block content %}
+{% extends 'layout/nav.html' %} 
+{% block title %} updateProvider {% endblock title %}
+{% block content %}
 
 <div class="container mt-5 pt-3">
   <!-- Form-->
@@ -6,7 +8,7 @@
     <li>{{provider}}</li>
   </ul>
   <div class="container mt-5 pt-3">
-    <form class="row g-3" action="/form_brand/" method="POST">
+    <form class="row g-3" action="{% url 'form_brand' %}" method="POST">
       {% csrf_token %}
       <div class="col-md-6">
         <label for="proveedor" class="form-label">Proveedor</label>

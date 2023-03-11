@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit_User</title>
-</head>
-<body>
-    
-    <h1>Formulario - Editar Perfil</h1>
-    <h1>De {{usuario}}</h1>
+{% extends 'layout/form_head.html' %} 
+{% block title %} Profile {% endblock title %}
+{% block content%}
+<h1>Formulario - Editar Perfil {{usuario}}</h1>
     
     <form action="" method="POST">
     {% csrf_token %}
@@ -17,9 +9,8 @@
             {{ formulario.as_table }}
         </table>
     
-        <input type="submit" value="Enviar">
-    
+        <input class="btn btn-primary mb-2" type="submit" value="Enviar">    
     </form>
-    
-</body>
-</html>
+    <a type="sub" class="btn btn-primary mb-2" href="/">Volver</a>
+
+{% endblock %}

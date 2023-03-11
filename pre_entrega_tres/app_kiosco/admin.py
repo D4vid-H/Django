@@ -3,6 +3,6 @@ from .models import *
 
 # Register your models here.
 
-lista = [Provider, Product, Person, Purchase, Avatar]
+lista = [Provider, Product, Purchase, Avatar]
 
 admin.site.register(lista)

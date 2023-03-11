@@ -1,21 +1,30 @@
-{% extends 'layout/nav.html' %} {% block content %}
+{% extends 'layout/nav.html' %} 
+{% block title %} addProducts {% endblock title %}
+{% block content %}
 
 <div class="container mt-5 pt-3">
   <!-- Form-->
-  <form class="row g-3" action="/form_product/" method="POST">
+  <form class="row g-3" action="{% url 'form_product' %}" method="POST">
     {% csrf_token %}
     <div class="col-md-6">
       <label for="inputEmail4" class="form-label">Nombre</label>
       <input type="text" name="name" class="form-control" id="inputEmail4" />
     </div>
-    <div class="col-md-6">
+    <div class="col-md-3">
       <label for="inputEmail4" class="form-label">Tamaño</label>
       <input type="text" name="size" class="form-control" id="inputEmail4" />
+    </div>
+    <div class="col-md-3">
+      <label for="inputState" class="form-label">Unidad</label>
+      <select id="inputState" name="measure" class="form-select">
+        {% for measure in measures %}
+        <option>{{measure}}</option>
+        {% endfor %}
+      </select>
     </div>
     <div class="col-md-4">
       <label for="inputState" class="form-label">Proveedor</label>
       <select id="inputState" name="provider" class="form-select">
-        <option selected>Seleccionar...</option>
         {% for provider in providers %}
         <option>{{provider.brand}}</option>
         {% endfor %}
@@ -34,9 +43,11 @@
             <div class="card" style="width: 18rem">
               <div class="card-body">
                 <h5 class="card-title">{{product.name}}</h5>
-                <p class="card-text">{{product.size}} ml</p>
+                <p class="card-text">{{product.size}} {{product.measure}}</p>
                 <a href="{% url 'form_product_update' product.id %}" class="btn btn-primary">Editar</a>
+                {% if request.user.is_superuser%}
                 <a href="{% url 'form_product_delete' product.id %}" class="btn btn-primary">Borrar</a>
+                {% endif %}
               </div>
             </div>
           </div>

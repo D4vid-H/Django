@@ -18,7 +18,6 @@ urlpatterns = [
     path('form_product/', views.form, {'a': 'product'} ,name = "form_product"),
     path('form_product_update/<param>/', views.product_update, name = "form_product_update"),
     path('form_product_delete/<param>/', views.product_delete, name = "form_product_delete"),
-    path('form_client/', views.form, {'a': 'client'}, name = "form_client"),
     path('form_purchase/', views.form, {'a': 'purchase'}, name = "form_purchase"),
     path('product_search/', views.search, name = "product_search"),
     path('new_letter/', views.new_letter, name = "new_letter"),

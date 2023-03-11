@@ -1,4 +1,6 @@
-{% extends 'layout/nav.html' %} {% block content %}
+{% extends 'layout/nav.html' %} {% load static %}
+{% block title %} About {% endblock title %}
+{% block content %}
 <div class="container mt-5 pt-3">
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quod
@@ -10,5 +12,23 @@
     exercitationem voluptate inventore, illo rem iste quisquam hic. Sed,
     repellat reiciendis!
   </p>
-</div>
+
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="{% static 'yo.jpg' %}" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">David Hillton</h5>
+            <p class="card-text">Este es mi proyecto para PYTHON con Django. Soy estudiante de CoderHouse desde el 2021 y gusta mucho programar y aprender.</p>
+            <p><a href="https://Linkedin.com/in/david-hillton">Linkedin</a></p>
+            <p><a href="https://github.com/D4vid-H">Github</a></p>
+            <p class="card-text"><small class="text-muted">{% now "SHORT_DATETIME_FORMAT" %}</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 {% endblock %}

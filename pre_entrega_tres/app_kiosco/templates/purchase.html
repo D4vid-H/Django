@@ -1,4 +1,6 @@
-{% extends 'layout/nav.html' %} {% block content %}
+{% extends 'layout/nav.html' %}{% load static %}
+{% block title %} Purchase {% endblock title %}
+{% block content %}
 <div class="container mt-5 pt-3">
   <p>
     <b>Lorem ipsum dolor sit amet consectetur adipisicing elit.</b> Assumenda
@@ -9,34 +11,34 @@
     doloribus vitae nisi totam dolores? Dolor nam mollitia veritatis esse
     exercitationem voluptate inventore, illo rem iste quisquam hic. Sed,
     repellat reiciendis!
-  </p>
-  {% if request.user.is_staff %}
+  </p>  
   <div>
-    <form class="row g-3" action="/purchase/" method="POST">{% csrf_token %}
       <div class="col-md-4">
-        <label for="inputState" class="form-label">Clientes</label>
-        <select id="inputState" name="client" class="form-select">
-          <option selected disabled>Seleccionar...</option>
-          {% for client in clients %}            
-            <option>{{client.id}} - {{client.name}} {{client.last_name}}</option>         
-          {% endfor %}
-        </select>
+        <p>Cliente</p>
+        <p class="text-capitalize text-center text h2">{{user.first_name}} {{user.last_name}}</p>
       </div>
-      <div class="col-12">
-        <button type="submit" class="btn btn-primary">Enviar</button>
-      </div>
-    </form>
   </div>
-  {% endif %}
+  <!-- card -->
+  <p>Ventas</p>
   <div class="mb-4">
     <div class="text-center">
       <div class="row">
         {% for purchase in purchases %}
         <div class="col-3 m-1">
-          <div class="card" style="width: 18rem">
-            <div class="card-body">
-              <h5 class="card-title">{{purchase.product.name}}</h5>
-              <p class="card-text">{{purchase.amount}}u x {{purchase.product.size}} ml</p>
+          <div class="card mb-3" style="max-width: 18rem;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                {% static purchase.product.name as image %}
+                <img src="{{image}}.png" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-text">{{purchase.product.name}}</h5>
+                  <p class="card-text">Unidades: {{purchase.amount}}</p>
+                  <p class="card-text">Tamaño: {{purchase.product.size}} {{purchase.product.measure}}</p>
+                  <p class="card-text"><small class="text-muted">{{purchase.timestamp}}</small></p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -44,6 +46,6 @@
       </div>
     </div>
   </div>
-
+ <!-- end card -->
 </div>
 {% endblock %}

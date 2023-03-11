@@ -2,10 +2,6 @@ from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 
-class Create_new_person(forms.Form):
-    name = forms.CharField(label="Nombre", max_length=150)
-    last_name = forms.CharField(label="Apellido", max_length=200)
-
 class Create_new_product(forms.Form):
     name = forms.CharField(max_length=200)
     size = forms.IntegerField()
@@ -18,11 +14,10 @@ class UserRegisterForm(UserCreationForm):
     password2 = forms.CharField(label='Repetir contraseña', required=True, widget=forms.PasswordInput(attrs={'class':'form-control', 'placeholder':'Confirm Password'}))
     first_name = forms.CharField(label="Nombre", widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'FirstName'}))
     last_name = forms.CharField(label="Apellido", widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'LastName'}))
-    address = forms.CharField(label="Direccion", widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Address'}))
     
     class Meta:
         model = User
-        fields = ['username','email', 'password1', 'password2','first_name', 'last_name', 'address']
+        fields = ['username','email', 'password1', 'password2','first_name', 'last_name']
         help_texts = {k:"" for k in fields}
 
 class UserEditForm(UserCreationForm):
@@ -31,11 +26,10 @@ class UserEditForm(UserCreationForm):
     password2 = forms.CharField(label='Repetir contraseña', widget=forms.PasswordInput(attrs={'class':'form-control', 'placeholder':'Confirm Password'}))
     first_name = forms.CharField(label="Nombre", widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'FirstName'}))
     last_name = forms.CharField(label="Apellido", widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'LastName'}))
-    address = forms.CharField(label="Direccion", widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Address'}))
 
     class Meta:
         model = User
-        fields = ['email', 'password1', 'password2','first_name', 'last_name', 'address']
+        fields = ['email', 'password1', 'password2','first_name', 'last_name']
         help_texts = {k:"" for k in fields}
     
 """ class AvatarFormulario(forms.Form):

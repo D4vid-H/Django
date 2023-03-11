@@ -1,16 +1,19 @@
-{% extends 'layout/nav.html' %} {% block content %}
+{% extends 'layout/nav.html' %} 
+{% block title %} addProvider {% endblock title %}
+{% block content %}
 <div class="container mt-5 pt-3">
-  <form class="row g-3" action="/form_brand/" method="POST">
+  <form class="row g-3" action= "{% url 'form_brand' %}" method="POST">
     {% csrf_token %}
     <div class="col-md-6">
       <label for="proveedor" class="form-label">Proveedor</label>
-      <input type="text" name="brand" class="form-control" id="proveedor" />
+      <input type="text" name="brand" class="form-control" id="proveedor"/>
+      <input type="text" name="flag" hidden>
     </div>
     <div class="col-12">
       <button type="submit" class="btn btn-primary">Enviar</button>
     </div>
     <div class="col-12">
-      <a href="/product/" class="btn btn-primary">volver</a>
+      <a href="{% url 'product' %}" class="btn btn-primary">volver</a>
     </div>
   </form>
   <div class="m-3">
@@ -22,7 +25,9 @@
             <div class="card-body">
               <h5 class="card-title">{{provider.brand}}</h5>
               <a href="{% url 'form_provider_update' provider.id %}" class="btn btn-primary">Editar</a>
+              {% if request.user.is_superuser %}
               <a href="{% url 'form_provider_delete' provider.id %}" class="btn btn-primary">Borrar</a>
+              {% endif %}
             </div>
           </div>
         </div>
